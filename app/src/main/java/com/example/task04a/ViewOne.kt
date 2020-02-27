@@ -39,6 +39,9 @@ class ViewOne: View {
         }
         override fun onSingleTapUp(ev: MotionEvent): Boolean {
             Log.d(LOGTAG, "SingleTapUp")
+            val xCoord = ev.x
+            val yCoord = ev.y
+            Log.d(LOGTAG, "SingleTapUp x= $xCoord y= $yCoord")
             return true
         }
         override fun onDoubleTap(ev: MotionEvent): Boolean {
