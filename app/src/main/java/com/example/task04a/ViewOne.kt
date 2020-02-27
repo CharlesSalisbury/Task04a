@@ -7,6 +7,7 @@ import android.util.Log
 import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
+import android.widget.Toast
 
 class ViewOne: View {
     constructor(context: Context?) : super(context)
@@ -42,6 +43,7 @@ class ViewOne: View {
             val xCoord = ev.x
             val yCoord = ev.y
             Log.d(LOGTAG, "SingleTapUp x= $xCoord y= $yCoord")
+            Toast.makeText(context, "SingleTapUp x= $xCoord y= $yCoord", Toast.LENGTH_SHORT).show()
             return true
         }
         override fun onDoubleTap(ev: MotionEvent): Boolean {
