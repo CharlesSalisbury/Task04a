@@ -41,6 +41,16 @@ class ViewOne: View {
             Log.d(LOGTAG, "SingleTapUp")
             return true
         }
+        override fun onDoubleTap(ev: MotionEvent): Boolean {
+            Log.d(LOGTAG, "DoubleTap")
+            return true
+        }
+        override fun onFling( event1: MotionEvent, event2: MotionEvent,
+                              velocityX: Float, velocityY: Float ): Boolean {
+            Log.d(LOGTAG, "Fling")
+            return true
+        }
+
     } // End of myGestureListener class
 
     companion object { // declare a constant (must be in the companion)
